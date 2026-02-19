@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [message, setMessage] = useState('Welcome to the Test Application');
+  const [message, setMessage] = useState('Welcome to the Enhanced Test Application');
 
   useEffect(() => {
     document.title = `Count: ${count}`;
@@ -20,6 +20,11 @@ function App() {
   const handleReset = () => {
     setCount(0);
     setMessage('Counter reset successfully!');
+    console.log('Counter has been reset');
+  };
+
+  const handleDouble = () => {
+    setCount(prev => prev * 2);
   };
 
   return (
@@ -28,11 +33,12 @@ function App() {
         <h1>{message}</h1>
         <div className="counter-container">
           <h2>Counter: {count}</h2>
-          <div className="button-group">
-            <button onClick={handleDecrement} className="btn btn-danger">-</button>
-            <button onClick={handleReset} className="btn btn-warning">Reset</button>
-            <button onClick={handleIncrement} className="btn btn-success">+</button>
-          </div>
+        <div className="button-group">
+          <button onClick={handleDecrement} className="btn btn-danger">-</button>
+          <button onClick={handleReset} className="btn btn-warning">Reset</button>
+          <button onClick={handleIncrement} className="btn btn-success">+</button>
+          <button onClick={handleDouble} className="btn btn-info">Double</button>
+        </div>
         </div>
         <p>
           This application is testing GitHub webhook functionality with file modifications.

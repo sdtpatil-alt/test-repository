@@ -40,4 +40,16 @@ export const dataService = {
   deletePost: async (id) => {
     return await deleteData(`/posts/${id}`);
   },
+
+  getComments: async () => {
+    return await fetchData('/comments');
+  },
+
+  getCommentById: async (id) => {
+    return await fetchData(`/comments/${id}`);
+  },
+
+  createComment: async (commentData) => {
+    return await postData('/comments', commentData);
+  },
 };
