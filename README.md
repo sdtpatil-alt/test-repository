@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# Webhook Test Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application is designed to test GitHub webhook functionality with various file operations including modifications, additions, and deletions.
+
+## Purpose
+
+This repository serves as a testbed for webhook integration testing, specifically for the omnisync-service project. It demonstrates how webhooks handle different types of file changes.
+
+## Test Scenarios
+
+The application tests the following webhook scenarios:
+
+1. **File Modifications** - Testing webhook triggers when existing files are updated
+2. **File Additions** - Testing webhook triggers when new files are created
+3. **File Deletions** - Testing webhook triggers when files are removed
+4. **Mixed Operations** - Testing webhook handling of complex changes with multiple file operations
+
+## Features
+
+- Interactive counter component with increment, decrement, and reset functionality
+- Real-time document title updates
+- Enhanced error handling and performance monitoring
+- Comprehensive test coverage
+- Modern UI with responsive design
 
 ## Available Scripts
 
@@ -8,63 +29,48 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+test-repository/
+├── public/              # Static assets
+├── src/
+│   ├── components/     # React components
+│   ├── hooks/          # Custom React hooks
+│   ├── utils/          # Utility functions
+│   ├── services/       # API services
+│   ├── config/         # Configuration files
+│   └── styles/         # Style configurations
+└── package.json        # Project dependencies
+```
 
-### `npm run eject`
+## Testing Webhooks
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To test webhook functionality:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Make changes to files (modify, add, or delete)
+2. Commit changes to the main branch
+3. Push to trigger the webhook
+4. Monitor webhook responses in your omnisync-service logs
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React 19.2.4
+- React DOM 19.2.4
+- Axios 1.6.0
+- Testing Library utilities
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for testing purposes only.
