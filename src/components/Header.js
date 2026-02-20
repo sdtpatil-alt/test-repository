@@ -1,4 +1,5 @@
 import React from 'react';
+// Test modification 3 - Modified Header.js
 import './Header.css';
 
 const Header = ({ title }) => {
